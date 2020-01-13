@@ -1,0 +1,11 @@
+.sider{
+    height: calc(100vh - 88px);
+    box-shadow: 2px 0px 4px -1px  rgba(157, 157, 157, 0.26);
+    margin-left: -10px;
+    position: fixed;
+    bottom: 0;
+}
+
+.hawa{
+    height: calc(100vh - 337px);
+}

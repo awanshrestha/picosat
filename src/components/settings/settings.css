@@ -1,0 +1,26 @@
+.settings-main-div{
+    text-align: left;
+    margin-top: 10px;
+}
+
+.settings-heading{
+    font-size: 33px;
+    font-weight: 500;
+    color: rgb(38, 212, 113);
+}
+
+.spinner{
+    color: rgb(75, 219, 219);
+    font-size: 34 ;
+    margin-top: -10px;
+}
+
+.location-heading{
+    font-size: 23px;
+    font-weight: 500;
+    color:rgb(75, 219, 219);
+}
+
+.settings-h4{
+    font-size: 17px;
+}

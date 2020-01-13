@@ -1,0 +1,27 @@
+.wrapper-altd{
+    height: 465px;
+    margin: 20px 13px 0 0;
+    padding: 10px 0 30px 0;
+    background-color: #fff;
+    border: 2px solid rgba(133, 133, 133, 0.144);
+    border-radius: 25px;
+    box-shadow: 12px 11px 30px -12px rgba(150,145,242,0.69);
+}
+
+.wrapper-altd h1{
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(157, 122, 190);
+    margin: 3px 19px 15px;
+}
+
+.slider-container{
+    height: 390px;
+    padding-left: 5px;
+    min-width: 122;
+}
+
+ .ant-tooltip-inner {
+    color:  rgb(255, 255, 255);
+    background-color:rgba(157, 154, 255, 0.493);
+}

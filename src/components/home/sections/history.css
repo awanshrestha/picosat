@@ -1,0 +1,58 @@
+.wrapper-history-home{
+    margin: 25px;
+}
+
+.wrapper-history-home h1{
+    margin: 10px 5px 10px 3px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(92, 88, 88, 0.623);
+}
+
+.history-home-box{
+    box-sizing: border-box;
+    border: 2px solid rgba(207, 207, 207, 0.336);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.history-home-icon-box{
+    display: inline-block;
+    margin:  5px 10px;
+}
+
+.history-home-title{
+    display: inline-block;
+    margin:  5px 5px;
+}
+
+.history-home-title h4{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(92, 88, 88, 0.623);
+}
+
+.history-home-right-box{
+    display: inline-block;
+    text-align: center;
+    background-color: #F17361;
+    width: 115px;
+    box-sizing: border-box;
+    border: 2px solid #F17361;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.history-home-right-box h4{
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    padding: 15px 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}

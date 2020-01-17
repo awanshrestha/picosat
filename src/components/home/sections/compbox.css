@@ -1,23 +1,66 @@
 .wrapper-compbox{
     margin: 20px 18px 30px 15px;
     padding: 10px 0 30px 0;
-    background-color:rgb(255, 255, 255);
+    background-color:rgba(255, 255, 255, 0.178);
     border: 2px solid rgba(133, 133, 133, 0.144);
     border-radius: 25px;
-    /* box-shadow: 12px 11px 30px -12px rgba(219, 146, 37, 0.795); */
+    box-shadow: 3px 11px 71px -15px rgba(163, 163, 163, 0.75);
     text-align: center;
+    position: relative;
+    height: 90px;
 }
 
 .wrapper-compbox h1{
     font-size: 20px;
-    font-weight: 600;
-    color: rgba(255, 37, 66, 0.85);
+    font-weight: 500;
+    color: rgba(255, 37, 208, 0.85);
     margin: 0px 19px 15px;
-    text-align: center;
+    text-align: left;
 }
 
 .compbox-container{
-    height: 40px;
+    height: 120px;
+    width: fit-content;
     padding-left: 5px;
     min-width: 122;
+    border: 2px solid rgba(204, 204, 204, 0.514);
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 10px 20px;
+    position: absolute;
+    left: 40px;
+}
+
+.compbox-container h3{
+    font-size: 17px;
+}
+
+.compbox-container h4{
+    font-size: 14px;
+    margin-top: 8px;
+    color: rgb(82, 82, 82);
+}
+
+.compbox-container-date{
+    height: 50px;
+    width: fit-content;
+    padding-left: 5px;
+    min-width: 122;
+    border: 2px solid rgba(204, 204, 204, 0.514);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 25px;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 15px 20px 20px;
+    position: absolute;
+    right: 20px;
+    margin-top: 60px;
+}
+
+.compbox-container-date  h3 span{
+    color: rgba(161, 161, 161, 0.726);
+    font-size: 20px;
 }

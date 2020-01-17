@@ -1,13 +1,10 @@
 import React from 'react';
-import {Slider} from 'antd';
 import './humidity.css';
 import GaugeChart from 'react-gauge-chart'
 
 class Humidity extends React.Component{
     render(){
-        const chartStyle = {
-            height: 250,
-          }
+        
         return(
             <div className="wrapper-humidity">
                 <h1>Humidity</h1>

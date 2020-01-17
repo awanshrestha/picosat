@@ -92,17 +92,7 @@ class Home extends React.Component{
     render(){
         return(
             <div>
-
-                
-
-                {/* <h1>{this.state.timestamp}</h1>
-                <h1>{this.state._id}</h1>
-                <h1>{this.state.temperature}</h1>
-                <h1>{this.state.humidity}</h1>
-                <h1>{this.state.pressure}</h1> */}
-
-
-                <Row type="flex">
+                <Row type="flex" >
                     <Col span={3}>
                         <Altitude altitud = {this.state.altitude}/>
                     </Col>
@@ -123,7 +113,7 @@ class Home extends React.Component{
                                 <History/>
                             </Col>
                             <Col span={16} className="cool">
-                                <TemperatureBox/>
+                                <TemperatureBox temperature = {this.state.temperature}/>
                             </Col>
                         </Row>
                     </Col>

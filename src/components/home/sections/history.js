@@ -4,9 +4,7 @@ import './history.css';
 
 class History extends React.Component{
     render(){
-        const chartStyle = {
-            height: 250,
-          }
+        
         return(
             <div className="wrapper-history-home">
                 <h1> Past 24 Hours Data:</h1>

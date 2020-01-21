@@ -1,7 +1,6 @@
 import React from 'react';
 import './about.css';
 import { Avatar, Col, Popover  } from 'antd';
-const per1 = require('./1.png');
 
 class Member extends React.Component{
     render(){

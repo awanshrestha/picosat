@@ -1,0 +1,14 @@
+.numberOfRows{
+    margin: 5px 15px;
+}
+
+.numberOfRows span{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(94, 214, 83);
+    margin-right: 10px;
+}
+
+.dtable{
+    margin: 20px 20px 10px 10px;
+}

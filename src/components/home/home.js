@@ -100,7 +100,7 @@ class Home extends React.Component{
                         <Row>
                             <Col span={12}>
                                 <CompBox/>
-                            </Col>
+                            </Col> 
                             <Col span={6} className="cool">
                                 <HumidityBox humidity = {this.state.humidity}/>
                             </Col>

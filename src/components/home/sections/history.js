@@ -1,8 +1,75 @@
 import React from 'react';
-import {Icon} from 'antd';
+import {Icon, message} from 'antd';
 import './history.css';
 
 class History extends React.Component{
+    _isMounted = false;
+    constructor(){
+        super();
+        this.state = {
+            minimumTemperature: 0,
+            maximumTemperature: 0,
+            minimumHumidity: 0,
+            maximumHumidity: 0,
+            minimumPressure: '0000',
+            maximumPressure: '0000',
+        }
+    }
+
+    componentDidMount(){
+        this._isMounted = true;
+        setTimeout(() => {
+            fetch('/get24hourdata')
+            .then((response)=> response.json())
+            .then(data =>{
+                if(this._isMounted){
+                    this.setState(()=>{
+                        return {
+                            minimumTemperature: Math.round(data.minTemperature),
+                            maximumTemperature: Math.round(data.maxTemperature),
+                            minimumHumidity:  Math.round(data.minHumidity),
+                            maximumHumidity:  Math.round(data.maxHumidity),
+                            minimumPressure:  Math.round(data.minPressure),
+                            maximumPressure:  Math.round(data.maxPressure),
+                        }
+                    })
+                }
+            })
+            .catch(function(error){
+                message.error('Cannot get past 24 hour data');
+            });
+        }, 3000);
+    }
+
+    componentDidUpdate(){
+        setTimeout(() => {
+            fetch('/get24hourdata')
+            .then((response)=> response.json())
+            .then(data =>{
+                if(this._isMounted){
+                this.setState(()=>{
+                    return {
+                        minimumTemperature: Math.round(data.minTemperature),
+                        maximumTemperature: Math.round(data.maxTemperature),
+                        minimumHumidity:  Math.round(data.minHumidity),
+                        maximumHumidity:  Math.round(data.maxHumidity),
+                        minimumPressure:  Math.round(data.minPressure),
+                        maximumPressure:  Math.round(data.maxPressure),
+                    }
+                })
+                }
+            })
+            .catch(function(error){
+                message.error('Cannot u[date past 24 hour data');
+            });
+        }, 6000);
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
+      }
+
+
     render(){
         
         return(
@@ -17,7 +84,7 @@ class History extends React.Component{
                     </div>
                     <div className="history-home-right-box">
                         <h4>
-                        10 - 12 °C
+                        {this.state.minimumTemperature} - {this.state.maximumTemperature} °C
                         </h4>
                     </div>
                 </div>
@@ -32,7 +99,7 @@ class History extends React.Component{
                     <span style={{width:"25px"}}></span>
                     <div className="history-home-right-box" style={{backgroundColor:"#7ECFFF", borderColor: "#7ECFFF"}}>
                         <h4>
-                        10 - 12 %
+                        {this.state.minimumHumidity} - {this.state.maximumHumidity} %
                         </h4>
                     </div>
                 </div>
@@ -47,7 +114,7 @@ class History extends React.Component{
                     <span style={{width:"30px"}}></span>
                     <div className="history-home-right-box" style={{backgroundColor:"#7768E5", borderColor: "#7768E5"}}>
                         <h4>
-                        1000-11000 Pascal
+                        {this.state.minimumPressure} - {this.state.maximumPressure} Pascal
                         </h4>
                     </div>
                 </div>

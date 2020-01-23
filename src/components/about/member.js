@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.css';
-import { Avatar, Col, Popover  } from 'antd';
+import { Avatar, Col, Popover,Icon  } from 'antd';
 
 class Member extends React.Component{
     render(){
@@ -12,7 +12,13 @@ class Member extends React.Component{
         
         const content = (
             <div>
-                a
+                <a href="https://www.facebook.com/awanshresthaA1" ><Icon type="facebook" theme="filled" style={{fontSize:25}}/></a>
+                 &nbsp;
+                 <a href="https://github.com/awanshrestha" ><Icon type="github" theme="filled" style={{fontSize:25}}/></a>
+                 &nbsp;
+                <a href="https://www.linkedin.com/in/awanshrestha/" ><Icon type="linkedin" theme="filled" style={{fontSize:25}} /></a>
+
+               
             </div>
         );
         

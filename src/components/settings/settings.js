@@ -1,9 +1,32 @@
 import React from 'react';
 import { Spin, Icon, Alert, Divider,Button  } from 'antd';
 import './settings.css';
-import Autocomplete from './autocomplete'
+//import Autocomplete from './autocomplete'
 
 class Settings extends React.Component{
+    constructor(){
+        super();
+        this.state = {
+             fields: {
+                 city: 1282950
+                }
+        }
+        this.changecity = this.changecity.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    changecity() {
+        this.props.changeid(this.state.fields.city);
+    }
+
+    handleChange(event) {
+        this.setState({
+            fields:{
+                city: event.target.value
+            }
+        })
+    }
+
     render(){
         const antIcon = <Icon type="setting" theme="filled" className="spinner" style={{fontSize:30}}spin />;
         return(
@@ -21,14 +44,18 @@ class Settings extends React.Component{
                 <Divider/>
                 <h3 className="location-heading">Location</h3>
                 <h4 className="settings-h4">
-                    <span>Current Location: </span>
-                    <span>Kathmandu</span>
                 </h4>
-                <br/>
                 <span className="settings-h4" style={{color:"#9b9b9b"}}>Change Location: &nbsp;  </span> 
-                <Autocomplete/>
-                <br/> <br/>
-                <Button>Change</Button>
+                
+                <form onSubmit={this.changecity}>
+                    <label>
+                        <input className="city-box" type="text" value={this.state.fields.city || ''} onChange={this.handleChange} />
+                    </label>
+
+                </form>
+
+                <br/> 
+                <Button onClick = {this.changecity}>Change</Button>
                 <Divider/>
             </div>
         )

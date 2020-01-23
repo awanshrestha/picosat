@@ -99,7 +99,7 @@ class Home extends React.Component{
                     <Col span={21}>
                         <Row>
                             <Col span={12}>
-                                <CompBox/>
+                                <CompBox cityid = {this.props.cityid}/>
                             </Col> 
                             <Col span={6} className="cool">
                                 <HumidityBox humidity = {this.state.humidity}/>
@@ -113,7 +113,7 @@ class Home extends React.Component{
                                 <History/>
                             </Col>
                             <Col span={16} className="cool">
-                                <TemperatureBox temperature = {this.state.temperature}/>
+                                <TemperatureBox temperature = {this.state.temperature} cityid =  {this.props.cityid} />
                             </Col>
                         </Row>
                     </Col>

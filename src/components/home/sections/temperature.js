@@ -59,7 +59,7 @@ class Temperature extends React.Component{
             // console.log("Error connecting to api");
         });
         }, 20000);
-    }    
+    }     
 
     componentWillUnmount() {
         this._isMounted = false;
@@ -75,7 +75,7 @@ class Temperature extends React.Component{
                 </div>  
             </div>
         )
-    }
+    } 
 }
 
 export default Temperature;

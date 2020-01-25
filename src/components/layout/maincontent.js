@@ -4,6 +4,7 @@ import 'antd/dist/antd.css';
 import Settings from '../settings/settings';
 import About from '../about/about';
 import Home from '../home/home'
+import History from '../history/historygraph';
 import Data from '../data/data'
 import Live from '../live/live';
 import { Layout,message } from 'antd';
@@ -26,14 +27,15 @@ class MainContent extends React.Component {
 
     render() {
         return (
-                <Content style={{ padding: "10px", minHeight: "100vh",paddingTop: "100px", margin: "0px",                     backgroundColor: "#F6F6F6", marginLeft: 70 }}>
+                <Content style={{ padding: "10px", minHeight: "100vh",paddingTop: "100px", margin: "0px", backgroundColor: "#F6F6F6", marginLeft: 70 }}>
                 <Switch>
                     <Route path='/' exact render = { props => <Home cityid = {this.state.cityid}/>} />
-                    <Route path='/data' component={Data} />
-                    <Route path='/graph' component={Graph} />
+                    <Route path='/data' component = {Data} />
+                    <Route path='/graph' render = { props => <Graph cityid = {this.state.cityid}/>} />
+                    <Route path='/history' component={History} />
                     <Route path='/live' component={Live} />
-                    <Route path='/about' exact component={About} />
-                    <Route path='/settings' render = { props => <Settings changeid = {this.changeid} cityid =                           {this.state.cityid}/> } />
+                    <Route path='/about' component={About} />
+                    <Route path='/settings' render = { props => <Settings changeid = {this.changeid} cityid = {this.state.cityid}/> } />
                 </Switch>
             </Content>
         );

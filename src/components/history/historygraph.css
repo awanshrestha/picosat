@@ -1,0 +1,33 @@
+.historygraph-heading{
+    margin: 20px;
+}
+
+.historygraph-heading h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: cadetblue;
+}
+
+.historygraph-heading span{
+    font-size: 15px;
+    color: rgba(102, 102, 102, 0.644);
+}
+
+.ant-select-selection-selected-value{
+    padding-top: 6px;
+}
+
+.history-graph-container{
+    margin: 40px 20px;
+    border: 2px solid rgba(207, 207, 207, 0.651);
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    min-height: 20px;
+}
+
+.history-graph-container h2{
+    font-size: 20px;
+    color: rgba(255, 30, 236, 0.589);
+    font-weight: 500;
+    padding: 10px;
+}

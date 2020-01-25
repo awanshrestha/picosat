@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spin, Icon, Alert, Divider,Button  } from 'antd';
+import { Spin, Icon, Alert, Divider,Button, message  } from 'antd';
 import './settings.css';
 //import Autocomplete from './autocomplete'
 
@@ -16,7 +16,12 @@ class Settings extends React.Component{
     }
 
     changecity() {
-        this.props.changeid(this.state.fields.city);
+        if(this.state.fields.city){
+            this.props.changeid(this.state.fields.city);
+        }
+        else{
+            message.error("Kidding me with that location");
+        }
     }
 
     handleChange(event) {

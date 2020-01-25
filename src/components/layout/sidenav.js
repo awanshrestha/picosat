@@ -26,7 +26,7 @@ class Sidenav extends React.Component {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="2">
-                        <Icon type="pie-chart" theme="filled" />
+                        <Icon type="database" theme="filled" />
                         <Link to="/data">
                         <span>Data</span>
                         </Link>
@@ -38,12 +38,18 @@ class Sidenav extends React.Component {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="4">
+                        <Icon type="pie-chart" theme="filled" />
+                        <Link to="/history">
+                        <span>History</span>
+                        </Link>
+                    </Menu.Item>
+                    {/* <Menu.Item key="5">
                         <Icon type="compass" theme="filled" />
                         <Link to="/live">
                         <span>Live</span>
                         </Link>
-                    </Menu.Item>
-                    <Menu.Item key="5">
+                    </Menu.Item> */}
+                    <Menu.Item key="6">
                         <Icon type="question-circle" theme="filled" />
                         <Link to="/about">
                         <span>About</span>
@@ -51,7 +57,7 @@ class Sidenav extends React.Component {
                     </Menu.Item>
                     
                     <div className="hawa"></div>
-                    <Menu.Item key="6" className ="settings">
+                    <Menu.Item key="7" className ="settings">
                         <Icon type="setting" theme="filled" />
                         <Link to="/settings">
                         <span>Settings</span>

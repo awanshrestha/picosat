@@ -1,0 +1,39 @@
+.agraph-outer-wrapper{
+    margin: 10px 18px 30px 15px;
+    padding: 10px 0 30px 0;
+    background-color:rgb(255, 255, 255);
+    border: 2px solid rgba(133, 133, 133, 0.144);
+    border-radius: 25px;
+    /* box-shadow: 12px 11px 30px -12px rgba(219, 146, 37, 0.795); */
+    text-align: center;
+}
+
+.agraph-outer-wrapper h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 37, 66, 0.85);
+    margin: 0px 19px 15px 30px;
+    text-align: left;
+}
+
+.agraph-graph-container{
+    height: 190px;
+    padding-left: 5px;
+    min-width: 122;
+}
+
+.agraph-info{
+    margin: 20px;
+}
+
+.agraph-info h1{
+    font-size: 25px;
+    font-weight: 600;
+    color: cadetblue;
+}
+
+.agraph-info p{
+    font-size: 16px;
+    font-style: italic;
+    color: rgba(75, 75, 75, 0.616);
+}

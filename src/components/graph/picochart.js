@@ -11,21 +11,21 @@ const data = {
       lineTension: 0.5,
       data: []
     },
-    {
-        label: "API Temperature",
-        borderColor: "blue",
-        backgroundColor: "rgba(20, 99, 255, 0.5)",
-        lineTension: 0.5,
-        data: []
-      }
+    // {
+    //     label: "API Temperature",
+    //     borderColor: "blue",
+    //     backgroundColor: "rgba(20, 99, 255, 0.5)",
+    //     lineTension: 0.5,
+    //     data: []
+    //   }
   ]
 };
 
 
 class TempChart extends React.Component{
   render() {
-    let picotemp = this.props.temperature;
-    let apitemp = this.props.owmtemperature;
+    let pico = this.props.picodata;
+    //let api = this.props.owmdata;
     const options = {
       tooltips: {
         mode: 'nearest',
@@ -43,12 +43,12 @@ class TempChart extends React.Component{
               onRefresh: function () {
                 data.datasets[0].data.push({
                   x: Date.now(),
-                  y: picotemp
+                  y: pico
                 });
-                data.datasets[1].data.push({
-                  x: Date.now(),
-                  y: apitemp
-                });
+                // data.datasets[1].data.push({
+                //   x: Date.now(),
+                //   y: api
+                // });
               },
               delay: 2000
             }

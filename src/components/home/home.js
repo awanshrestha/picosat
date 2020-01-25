@@ -48,7 +48,7 @@ class Home extends React.Component{
             message.error('Error Connecting to database');
             // console.log("Error connecting to database");
         });
-        }, 3000);
+        }, 1000);
     }
     
     componentDidUpdate(){

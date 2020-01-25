@@ -20,8 +20,7 @@ class Temperature extends React.Component{
         this._isMounted = true;
         let  id  = this.props.cityid;
         setTimeout(() => {
-            console.log(id)
-            fetch('http://api.openweathermap.org/data/2.5/weather?id='+ id +'&appid=bbc5f477a5886eafe02dd98387d2503f')
+        fetch('http://api.openweathermap.org/data/2.5/weather?id='+ id +'&appid=bbc5f477a5886eafe02dd98387d2503f')
         .then((response) => response.json())
         .then(data=>{
             if(this._isMounted){

@@ -38,7 +38,7 @@ class History extends React.Component{
             .catch(function(error){
                 message.error('Cannot get past 24 hour data');
             });
-        }, 3000);
+        }, 1000);
     }
 
     componentDidUpdate(){

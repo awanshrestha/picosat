@@ -1,6 +1,8 @@
 import React from 'react';
 import {Icon, message} from 'antd';
 import './history.css';
+const thermo = require('./thermo.png');
+const pollutionico = require('./pollution.png');
 
 class History extends React.Component{
     _isMounted = false;
@@ -13,6 +15,10 @@ class History extends React.Component{
             maximumHumidity: 0,
             minimumPressure: '0000',
             maximumPressure: '0000',
+            minimumGas: 0,
+            maximumGas: 0,
+            minimumPollution: 0,
+            maximumPollution: 0,
         }
     }
 
@@ -31,6 +37,10 @@ class History extends React.Component{
                             maximumHumidity:  Math.round(data.maxHumidity),
                             minimumPressure:  Math.round(data.minPressure),
                             maximumPressure:  Math.round(data.maxPressure),
+                            minimumGas:  Math.round(data.minGas),
+                            maximumGas:  Math.round(data.maxGas),
+                            minimumPollution:  Math.round(data.minPollution),
+                            maximumPollution:  Math.round(data.maxPollution),
                         }
                     })
                 }
@@ -55,6 +65,10 @@ class History extends React.Component{
                         maximumHumidity:  Math.round(data.maxHumidity),
                         minimumPressure:  Math.round(data.minPressure),
                         maximumPressure:  Math.round(data.maxPressure),
+                        minimumGas:  Math.round(data.minGas),
+                        maximumGas:  Math.round(data.maxGas),
+                        minimumPollution:  Math.round(data.minPollution),
+                        maximumPollution:  Math.round(data.maxPollution),
                     }
                 })
                 }
@@ -74,11 +88,13 @@ class History extends React.Component{
         
         return(
             <div className="wrapper-history-home">
-                <h1> Past 24 Hours Data:</h1>
+                <h1> Past 24 Hours Data Range:</h1>
                 <div className="history-home-box">
                     <div className="history-home-icon-box">
-                        <Icon type="picture" theme="filled" style={{ fontSize: '40px', color: '#F17361' }} />
+                        {/* <Icon type="picture" theme="filled" style={{ fontSize: '40px', color: '#F17361' }} /> */}
+                        <img src={thermo} alt="Pico Sat Logo" style={{height:"30px", width:"30px", marginLeft:"5px"}}/>
                     </div>
+
                     <div className="history-home-title">
                         <h4>Temperature</h4>
                     </div>
@@ -118,6 +134,39 @@ class History extends React.Component{
                         </h4>
                     </div>
                 </div>
+
+                <div style={{height:"30px"}}></div>
+
+                <div className="history-home-box">
+                    <div className="history-home-icon-box">
+                        <Icon type="fire" theme="filled" style={{ fontSize: '35px', color: '#FFA03B'}}/>    
+                    </div>
+
+                    <div className="history-home-title">
+                        <h4>Gas Readings</h4>
+                    </div>
+                    <div className="history-home-right-box" style={{backgroundColor:"#FFA03B", borderColor: "#FFA03B"}}>
+                        <h4>
+                        {this.state.minimumGas} - {this.state.maximumGas} 
+                        </h4>
+                    </div>
+                </div>
+
+                <div className="history-home-box">
+                    <div className="history-home-icon-box">
+                        <img src={pollutionico} alt="Pico Sat Logo" style={{height:"30px", width:"30px", marginLeft:"5px"}}/>
+                    </div>
+
+                    <div className="history-home-title">
+                        <h4>Pollution</h4>
+                    </div>
+                    <div className="history-home-right-box" style={{backgroundColor:"#CACACD", borderColor: "#CACACD"}}>
+                        <h4>
+                        {this.state.minimumPollution} - {this.state.maximumPollution} mg/m<sup>3</sup>
+                        </h4>
+                    </div>
+                </div>
+
                 
             </div>
         )

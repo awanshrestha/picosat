@@ -14,7 +14,7 @@ class About extends React.Component{
                 <div className="intro">
                     <h1>A Brief Intro</h1>
                     <p>
-                    PicoSat is a satellite in size of a can. It started off as our semester project at Kathmandu University. We have used various sensors to monitor real time data of environment variants and display those in our system.
+                    EnSat is a satellite in size of a can. It started off as our semester project at Kathmandu University. We have used various sensors to monitor real time data of environment variants and display those in our system.
                     </p>
                     
                 </div>
@@ -23,10 +23,10 @@ class About extends React.Component{
                 <br/><br/>
                 <div>
                     <Row type="flex" justify="center">
-                        <Member photo = {per4} naam = "Awan Shrestha"/>
-                        <Member photo = {per1} naam = "Sansrit Paudel"/>
-                        <Member photo = {per3} naam = "Aashish Adhikari"/>
-                        <Member photo = {per2} naam = "Sabil Shrestha"/>
+                        <Member photo = {per4} naam = "Aashish Adhikari"/>
+                        <Member photo = {per1} naam = "Awan Shrestha"/>
+                        <Member photo = {per3} naam = "Sansrit Paudel"/>
+                        <Member photo = {per2} naam = "Subarna Chaudhary"/>
                     </Row>
                     
                 </div>

@@ -5,7 +5,7 @@ import "chartjs-plugin-streaming";
 const data = {
   datasets: [
     {
-      label: "PicoSat Temperature",
+      label: "EnSat Temperature",
       borderColor: "#7ECFFF",
       backgroundColor: "rgba(173, 224, 255, 0.47)",
       lineTension: 0.5,

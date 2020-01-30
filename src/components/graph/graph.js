@@ -10,7 +10,9 @@ class Graph extends React.Component{
         this.state = {
             temperature: 0,
             humidity: 0,
-            pressure: 0, 
+            pressure: 0,
+            gas:0,
+            pollution:0, 
             apitemperature: 0,
             apihumidity: 0,
             apipressure: 0
@@ -29,6 +31,8 @@ class Graph extends React.Component{
                         temperature: data.temperature,
                         humidity: data.humidity,
                         pressure: data.pressure,
+                        gas: data.gas,
+                        pollution: data.pollution
                     }
                 })
             }
@@ -80,6 +84,8 @@ class Graph extends React.Component{
                              temperature: data.temperature,
                              humidity: data.humidity,
                              pressure: data.pressure,
+                             gas: data.gas,
+                             pollution: data.pollution
                          }
                      })
                 }
@@ -126,7 +132,9 @@ class Graph extends React.Component{
                 <Agraph 
                     picotemperature = {this.state.temperature}
                     picohumidity = {this.state.humidity} 
-                    picopressure = {this.state.pressure}  
+                    picopressure = {this.state.pressure}
+                    picogas = {this.state.gas}
+                    picopollution = {this.state.pollution}  
                     // picodata = {this.state.temperature}
                     // owmdata =  {this.state.apitemperature}
                 />      

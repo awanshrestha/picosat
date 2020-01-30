@@ -56,3 +56,7 @@
     overflow: hidden;
     box-sizing: border-box;
 }
+
+.thermometer-ko-icon{
+    background-image: url('thermo.png');
+}

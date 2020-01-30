@@ -13,6 +13,8 @@ class Dtable extends React.Component{
                 "humidity": adata.humidity,
                 "pressure": adata.pressure,
                 "altitude": adata.altitude,
+                "gas": adata.gas,
+                "pollution": adata.pollution,
                 "_id": adata._id,
             }
         })
@@ -41,6 +43,16 @@ class Dtable extends React.Component{
               title: 'Altitude (Meter)',
               dataIndex: 'altitude',
               key: 'altitude',
+            },
+            {
+              title: 'Gas Data',
+              dataIndex: 'gas',
+              key: 'gas',
+            },
+            {
+              title: 'Pollution (mg/m^3)',
+              dataIndex: 'pollution',
+              key: 'pollution',
             },
           ];
           

@@ -15,7 +15,7 @@ class MainContent extends React.Component {
     constructor(){
         super()
         this.state = {
-            cityid: 1282950
+            cityid: 1283240
         }
         this.changeid = this.changeid.bind(this);
     }

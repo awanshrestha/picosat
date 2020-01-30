@@ -9,7 +9,7 @@ class Temperature extends React.Component{
     constructor(){
         super();
         this.state = {
-            location: ".......................................",
+            location: "..............................",
             apitemp: 0,
             apihum:0,
             apipre:0
@@ -78,13 +78,14 @@ class Temperature extends React.Component{
     render(){
         return(
             <div className="wrapper-compbox">
-                <h1>Current PicoSat Location: {this.state.location}</h1>
+                {/* <h1>Current EnSat Location: {this.state.location}</h1> */}
+                <h1>EnSat Location: {this.state.location === "Kathmandu" ? "Pulchok" : this.state.location} </h1>
                 <Draggable>
                 <div className="compbox-container">
                     <h3>OpenWeatherMap's Data:</h3>
                     <h4>Temperature: {this.state.apitemp} °C</h4>
                     <h4>Humidity: {this.state.apihum} %</h4>
-                    <h4>Pressure: {this.state.apipre} Pascal </h4>
+                    <h4>Pressure: {this.state.apipre * 100} Pascal </h4>
                 </div>  
                 </Draggable>
                 <Draggable>

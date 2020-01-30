@@ -5,9 +5,9 @@ import "chartjs-plugin-streaming";
 const data = {
   datasets: [
     {
-      label: "EnSat Temperature",
-      borderColor: "#00FF00",
-      backgroundColor: "rgba(84, 207, 84, 0.45)",
+      label: "EnSat Pollution Data",
+      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
       lineTension: 0.5,
       data: []
     },

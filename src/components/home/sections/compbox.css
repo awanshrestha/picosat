@@ -30,7 +30,7 @@
     text-align: left;
     padding: 10px 20px;
     position: absolute;
-    left: 40px;
+    left: 10px;
 }
 
 .compbox-container h3{
@@ -56,11 +56,11 @@
     text-align: left;
     padding: 15px 20px 20px;
     position: absolute;
-    right: 20px;
-    margin-top: 60px;
+    right: 0px;
+    margin-top: 70px;
 }
 
 .compbox-container-date  h3 span{
-    color: rgba(161, 161, 161, 0.726);
+    color: rgba(255, 0, 0, 0.726);
     font-size: 20px;
 }

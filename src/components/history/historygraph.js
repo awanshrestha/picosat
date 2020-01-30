@@ -2,6 +2,8 @@ import React from 'react';
 import TemperatureChart from './temphistorychart';
 import HumidityChart from './humhistorychart';
 import PressureChart from './prehistorychart';
+import GasChart from './gashistorychart';
+import PollutionChart from './pollhistorygraph';
 import {Select, message} from 'antd';
 import './historygraph.css';
 
@@ -15,6 +17,8 @@ class History extends React.Component{
             tempArr: [],
             humArr: [],
             pressArr: [],
+            gasArr: [],
+            pollutionArr: [],
             timestring: "1 minute"
         }
         this.handleChange = this.handleChange.bind(this);
@@ -26,40 +30,45 @@ class History extends React.Component{
             .then((response) => response.json())
             .then(data=>{
                 var say;
-                    if(value == 1){
+                    if(value === "1"){
                         say = "1 Minute";
                     }
-                    else if(value == 5){
+                    else if(value === "5"){
                         say = "5 Minutes";
                     }
-                    else if(value == 10){
+                    else if(value === "10"){
                         say = "10 Minutes";
                     }
-                    else if(value == 60){
+                    else if(value === "60"){
                         say = "1 Hour";
                     }
-                    else if(value == 120){
+                    else if(value === "120"){
                         say = "2 Hours";
                     }
-                    else if(value == 300){
+                    else if(value === "300"){
                         say = "5 Hours";
                     }
-                    else if(value == 1440){
+                    else if(value === "1440"){
                         say = "1 Day";
                     }
                     else{
                         say = "1 minute";
                     }
+                    console.log(data)
                     let timeArray = data.time;
                     let temperatureArray = data.temperaturehistory;
                     let humidityArray = data.humidityhistory;
                     let pressureArray = data.pressurehistory;
+                    let gasArray = data.gashistory;
+                    let pollutionArray = data.pollutionhistory;
                     this.setState(()=>{
                         return {
                             timeArr: timeArray,
                             tempArr: temperatureArray,
                             humArr: humidityArray,
                             pressArr: pressureArray,
+                            gasArr: gasArray,
+                            pollutionArr: pollutionArray,
                             timestring: say
                         }
                     })
@@ -79,12 +88,16 @@ class History extends React.Component{
                     let temperatureArray = data.temperaturehistory;
                     let humidityArray = data.humidityhistory;
                     let pressureArray = data.pressurehistory;
+                    let gasArray = data.gashistory;
+                    let pollutionArray = data.pollutionhistory;
                     this.setState(()=>{
                         return {
                             timeArr: timeArray,
                             tempArr: temperatureArray,
                             humArr: humidityArray,
                             pressArr: pressureArray,
+                            gasArr: gasArray,
+                            pollutionArr: pollutionArray,
                         }
                     })
             })
@@ -129,6 +142,18 @@ class History extends React.Component{
                 <div className = "history-graph-container">
                     <h2>Pressure of Last {this.state.timestring} (Pascal)</h2>
                     <PressureChart data = {this.state.pressArr  }  graphtime= {this.state.timeArr}/>
+                </div>
+                <div style={{height:"30px"}}></div>
+
+                <div className = "history-graph-container">
+                    <h2>Gas Data of Last {this.state.timestring}</h2>
+                    <GasChart data = {this.state.gasArr  }  graphtime= {this.state.timeArr}/>
+                </div>
+                <div style={{height:"30px"}}></div>
+
+                <div className = "history-graph-container">
+                    <h2>Pollution Data of Last {this.state.timestring} (mg/m^3)</h2>
+                    <PollutionChart data = {this.state.gasArr  }  graphtime= {this.state.timeArr}/>
                 </div>
                 <div style={{height:"30px"}}></div>
             </div>

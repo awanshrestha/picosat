@@ -5,8 +5,14 @@ import Altitude from './sections/altitude';
 import PressureBox from './sections/pressure';
 import HumidityBox from './sections/humidity';
 import TemperatureBox from './sections/temperature';
+import TemperatureNumberBox from './sections/temperaturenumber';
+import Gas from './sections/gas';
+import Pollution from './sections/pollution';
 import CompBox from './sections/compbox';
 import History from './sections/history';
+import Rotator from './sections/homepagesat';
+
+const kukologo = require('./kulogo.png');
 
 class Home extends React.Component{
     _isMounted = false;
@@ -18,6 +24,8 @@ class Home extends React.Component{
             humidity: 0,
             pressure: 0, 
             altitude: 1500,
+            gas: 0,
+            pollution: 0,
             _id: "",
             int: 0,
         }
@@ -38,6 +46,8 @@ class Home extends React.Component{
                         humidity: data.humidity,
                         pressure: data.pressure,
                         altitude: data.altitude,
+                        gas: data.gas,
+                        pollution: data.pollution,
                         _id: data._id,
                         int:0
                     }
@@ -66,6 +76,8 @@ class Home extends React.Component{
                              humidity: data.humidity,
                              pressure: data.pressure,
                              altitude: data.altitude,
+                             gas: data.gas,
+                             pollution: data.pollution,
                              _id: data._id,
                              int: x
                          }
@@ -95,17 +107,23 @@ class Home extends React.Component{
                 <Row type="flex" >
                     <Col span={3}>
                         <Altitude altitud = {this.state.altitude}/>
+                        <div className="kulogohome">
+                            <img src={kukologo} alt="Pico Sat Logo" className="logo" />
+                        </div>
                     </Col>
                     <Col span={21}>
                         <Row>
-                            <Col span={12}>
+                            <Col span={9}>
                                 <CompBox cityid = {this.props.cityid}/>
                             </Col> 
-                            <Col span={6} className="cool">
-                                <HumidityBox humidity = {this.state.humidity}/>
+                            <Col span={5} className="cool">
+                                <Gas gas = {this.state.gas}/>
                             </Col>
-                            <Col span={6}>
-                                <PressureBox pressure = {this.state.pressure}/>
+                            <Col span={5} className="cool">
+                                <Pollution pollution = {this.state.pollution}/>
+                            </Col>
+                            <Col span={5}>
+                                <TemperatureNumberBox temperature = {this.state.temperature}/>
                             </Col>
                         </Row>
                         <Row>
@@ -114,11 +132,25 @@ class Home extends React.Component{
                             </Col>
                             <Col span={16} className="cool">
                                 <TemperatureBox temperature = {this.state.temperature} cityid =  {this.props.cityid} />
+
+                                <Row>
+                                <Col span={8} className="cool">
+                                    <HumidityBox humidity = {this.state.humidity}/>
+                                </Col>
+                                <Col span={8} className="cool">
+                                    <PressureBox pressure = {this.state.pressure}/>
+                                </Col>
+                                <Col span={8}>
+                                    <Rotator/>
+                                </Col>
+                            </Row>
+
                             </Col>
+
                         </Row>
                     </Col>
                 </Row>
-
+                
             </div>
         )
     }

@@ -1,18 +1,8 @@
-.satimg{
-    width: 30%;
-    margin: 100px 400px;
+.ghumnesatellite{
     animation-name: spinner;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-duration: 6s;
-}
-
-.satimg:hover{
-    animation-play-state: paused;
-} 
-
-.stage{
-    perspective: 1200px;
 }
 
 @keyframes spinner {
@@ -20,6 +10,6 @@
       transform: rotateY(0deg);
     }
     to {
-      transform: rotateY(-360deg);
+      transform: rotateY(360deg);
     }
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './about.css';
-import { Avatar, Col, Popover,Icon  } from 'antd';
+import { Avatar, Col, Popover, Icon  } from 'antd';
 
 class Member extends React.Component{
     render(){
@@ -8,6 +8,8 @@ class Member extends React.Component{
             fontSize: "20px",
             fontWeight: "500",
             textAlign: "center",
+            margin: "20px",
+            padding: "20px"
         }
         
         const content = (
@@ -16,15 +18,13 @@ class Member extends React.Component{
                  &nbsp;
                  <a href="https://github.com/awanshrestha" ><Icon type="github" theme="filled" style={{fontSize:25}}/></a>
                  &nbsp;
-                <a href="https://www.linkedin.com/in/awanshrestha/" ><Icon type="linkedin" theme="filled" style={{fontSize:25}} /></a>
-
-               
+                <a href="https://www.linkedin.com/in/awanshrestha/" ><Icon type="linkedin" theme="filled" style={{fontSize:25}} /></a>               
             </div>
         );
         
         return(
             <div>
-                <Col span={5} style={me} >
+                <Col style={me} >
                     <Popover content={content} >
                         <Avatar src={this.props.photo} size={80} />
                     </Popover>

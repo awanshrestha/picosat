@@ -15,7 +15,7 @@ class MainContent extends React.Component {
     constructor(){
         super()
         this.state = {
-            cityid: 1283240
+            cityid: 1282950
         }
         this.changeid = this.changeid.bind(this);
     }
@@ -26,8 +26,16 @@ class MainContent extends React.Component {
     }
 
     render() {
+        const contentstyle = {
+            padding: "10px",
+            minHeight: "100vh",
+            paddingTop: "100px", 
+            margin: "0px", 
+            backgroundColor: "#F6F6F6", 
+            marginLeft: 70 
+        }
         return (
-                <Content style={{ padding: "10px", minHeight: "100vh",paddingTop: "100px", margin: "0px", backgroundColor: "#F6F6F6", marginLeft: 70 }}>
+                <Content style={contentstyle}>
                 <Switch>
                     <Route path='/' exact render = { props => <Home cityid = {this.state.cityid}/>} />
                     <Route path='/data' component = {Data} />

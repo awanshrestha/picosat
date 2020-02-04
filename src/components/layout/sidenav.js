@@ -8,9 +8,11 @@ const { Sider } = Layout;
 class Sidenav extends React.Component {
     render() {
         return (
-            <Sider collapsible collapsed={true} trigger={null} 
-                    collapsedWidth={70} theme={"light"} 
-                    className="sider">
+            <Sider collapsible 
+                   collapsed={true} 
+                   trigger={null} 
+                   collapsedWidth={70} theme={"light"} 
+                   className="sider">
                 <Menu
                     defaultSelectedKeys={['1']}
                     mode="inline"

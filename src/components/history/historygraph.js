@@ -153,7 +153,7 @@ class History extends React.Component{
 
                 <div className = "history-graph-container">
                     <h2>Pollution Data of Last {this.state.timestring} (mg/m^3)</h2>
-                    <PollutionChart data = {this.state.gasArr  }  graphtime= {this.state.timeArr}/>
+                    <PollutionChart data = {this.state.pollutionArr  }  graphtime= {this.state.timeArr}/>
                 </div>
                 <div style={{height:"30px"}}></div>
             </div>

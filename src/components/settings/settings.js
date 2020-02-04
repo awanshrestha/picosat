@@ -8,7 +8,7 @@ class Settings extends React.Component{
         super();
         this.state = {
              fields: {
-                 city: 1283240
+                 city: 1282950
                 }
         }
         this.changecity = this.changecity.bind(this);

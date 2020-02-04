@@ -1,7 +1,7 @@
 import React from 'react';
 import './temperature.css';
 import TempChart from './tempchart';
-import {message} from 'antd';
+// import {message} from 'antd';
 
 class Temperature extends React.Component{
 
@@ -23,13 +23,14 @@ class Temperature extends React.Component{
                 let newtemp = ((data.main.temp -273).toFixed(2));
                 this.setState(()=>{
                     return {
-                        apitemp: newtemp,
+                        apitemp: 
+                        newtemp,
                     }
                 })
             }
         })
         .catch(function(error) {
-            message.error('Error Connecting to api');
+            // message.error('Error Connecting to api');
             // console.log("Error connecting to api");
         });
         }, 3000);
@@ -55,7 +56,7 @@ class Temperature extends React.Component{
             }
         })
         .catch(function(error) {
-            message.error('Error Connecting to api');
+            // message.error('Error Connecting to api');
             // console.log("Error connecting to api");
         });
         }, 20000);

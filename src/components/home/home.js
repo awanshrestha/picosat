@@ -82,7 +82,7 @@ class Home extends React.Component{
                              int: x
                          }
                      })
-                     message.success('update');
+                    //  message.success('update');
                      console.log(this.state.int);
                 }
             }

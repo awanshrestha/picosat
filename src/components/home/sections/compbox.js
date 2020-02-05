@@ -79,7 +79,7 @@ class Temperature extends React.Component{
         return(
             <div className="wrapper-compbox">
                 {/* <h1>Current EnSat Location: {this.state.location}</h1> */}
-                <h1>EnSat Location: {this.state.location === "Kathmandu" ? "Pulchok" : this.state.location} </h1>
+                <h1>EnSat Location: {this.state.location} </h1>
                 <Draggable>
                 <div className="compbox-container">
                     <h3>OpenWeatherMap's Data:</h3>

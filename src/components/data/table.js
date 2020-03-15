@@ -50,7 +50,7 @@ class Dtable extends React.Component{
               key: 'gas',
             },
             {
-              title: 'Pollution (mg/m^3)',
+              title: 'Pollution (μg/m^3)',
               dataIndex: 'pollution',
               key: 'pollution',
             },

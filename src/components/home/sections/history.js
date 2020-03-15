@@ -162,7 +162,7 @@ class History extends React.Component{
                     </div>
                     <div className="history-home-right-box" style={{backgroundColor:"#CACACD", borderColor: "#CACACD"}}>
                         <h4>
-                        {this.state.minimumPollution} - {this.state.maximumPollution} mg/m<sup>3</sup>
+                        {this.state.minimumPollution} - {this.state.maximumPollution} μg/m<sup>3</sup>
                         </h4>
                     </div>
                 </div>

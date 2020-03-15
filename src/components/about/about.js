@@ -15,7 +15,7 @@ class About extends React.Component{
                 <div className="intro">
                     <h1>A Brief Intro</h1>
                     <p>
-                    EnSat is a satellite in size of a can. It started off as our semester project at Kathmandu University. We have used various sensors to monitor real time data of environment variants and display those in our system.
+                    PicoSat is a satellite in size of a can. It started off as our semester project at Kathmandu University. We have used various sensors to monitor real time data of environment variants and display those in our system.
                     </p>
                     
                 </div>

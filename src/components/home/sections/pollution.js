@@ -11,7 +11,7 @@ class Pollution extends React.Component{
                 <h1>Pollution</h1>
                 <div className="pollution-container">
                     <Tabs tabPosition={"bottom"}>
-                        <TabPane tab="mg/m³" key="1">
+                        <TabPane tab="μg/m³" key="1">
                            <h4 className="pollution">{this.props.pollution}</h4>
                         </TabPane>
                     </Tabs>

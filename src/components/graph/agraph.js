@@ -84,7 +84,7 @@ class Agraph extends React.Component{
         </div> <br /><br />
         <div style={{ width: "700px", minHeight: "300px", margin: "0 auto" }}>
           <div className="agraph-outer-wrapper">
-            <h1 >Pollution Data Plot (mg/m³)</h1>
+            <h1 >Pollution Data Plot (μg/m³)</h1>
             <div className="agraph-graph-container">
               <Picochart5 picodata={this.props.picopollution} />
             </div>

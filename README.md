@@ -5,4 +5,16 @@ This was our fifth semester college project where I worked on data transfer from
 Project Screenshots:
 
 
+![](Documentation/Screenshots/Dashboard.PNG)
+
+
+
+![](Documentation/Screenshots/History.PNG)
+
+
+
+![](Documentation/Screenshots/Live%20Plot.PNG)
+
+
+![](Documentation/Screenshots/Table%20Data.PNG)
  

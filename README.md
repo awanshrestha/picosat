@@ -17,4 +17,15 @@ Project Screenshots:
 
 
 ![](Documentation/Screenshots/Table%20Data.PNG)
+
+
  
+Hardware:
+
+![](Documentation/Hardware/Hardware%20(1).jpg)
+
+
+![](Documentation/Hardware/Hardware%20(2).jpg)
+
+
+![](Documentation/Hardware/Hardware%20(3).jpg)

@@ -30,3 +30,14 @@ Hardware:
 
 <img src="https://raw.githubusercontent.com/awanshrestha/picosat/master/Documentation/Hardware/Hardware%20(3).jpg" width="400">
 
+## How to run
+- Install Node.js
+ 
+```bash
+> git clone https://github.com/awanshrestha/picosat.git
+> cd picosat
+> npm install
+> npm start
+```
+
+- Open http://localhost:3000 on your browser to see the project.

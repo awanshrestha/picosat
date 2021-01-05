@@ -1,10 +1,6 @@
 Project Website: https://ensatnepal.github.io/
 
 Project: https://ensat.netlify.app/
-API: https://ensatserver.herokuapp.com/
-https://ensatserver.herokuapp.com/getalldata
-https://ensatserver.herokuapp.com/getndata/5
-https://ensatserver.herokuapp.com/get24hourdata
 
 
 PicoSat(En Sat) is a miniature version of an Environmental Satellite which helps to record and analyze the environmental parameters as altitude, pressure, temperature, humidity and pollution level.
@@ -48,3 +44,11 @@ Hardware:
 ```
 
 - Open http://localhost:3000 on your browser to see the project.
+
+API: https://ensatserver.herokuapp.com/
+
+https://ensatserver.herokuapp.com/getalldata
+
+https://ensatserver.herokuapp.com/getndata/5
+
+https://ensatserver.herokuapp.com/get24hourdata

@@ -1,4 +1,5 @@
 Project Website: https://ensatnepal.github.io/
+Project: https://ensat.netlify.app/
 
 PicoSat(En Sat) is a miniature version of an Environmental Satellite which helps to record and analyze the environmental parameters as altitude, pressure, temperature, humidity and pollution level.
 

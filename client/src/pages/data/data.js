@@ -1,36 +1,65 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './data.css';
-import { InputNumber, message } from 'antd';
+import { InputNumber,message  } from 'antd';
 import Datatable from './table';
 
-function Data() {
-    const [data, setData] = useState([]);
-    const [dataToShow, setDataToShow] = useState(10);
+class Data extends React.Component{
+    constructor(){
+        super()
+        this.state = {
+            data : []
+        }
+        this.onChange = this.onChange.bind(this);
+    }
 
-    useEffect(() => {
-        fetch('https://ensatserver.herokuapp.com/getndata/' + dataToShow)
+    componentDidMount(){
+        fetch('https://ensatserver.herokuapp.com/getndata/10')
         .then((response)=> response.json())
-        .then(setData)
+        .then((fetcheddata)=>{
+            this.setState(()=>{
+                return {
+                    data: fetcheddata
+                }
+            })
+        })
         .catch(function(err){
             message.error('Could not update the table...');
         });
-    }, [dataToShow]);
-
-    function onChange(value) {
-        setDataToShow(value)
     }
 
-    return(
-        <div data-testid = 'data-page'>
-            <div className="numberOfRows">
-                <span>Number of rows :    </span>
-                <InputNumber min={1} max={500} defaultValue={10} onChange={onChange}/>
+    onChange(value) {
+        console.log(value);
+        if(value){
+            fetch('https://ensatserver.herokuapp.com/getndata/' + value)
+        .then((response)=> response.json())
+        .then((fetcheddata)=>{
+            this.setState(()=>{
+                return {
+                    data: fetcheddata
+                }
+            })
+        })
+        .catch(function(err){
+            message.error('Could not update the table...');
+        });
+        }
+    }
+
+    
+    
+    render(){
+        return(
+            <div>
+                <div className="numberOfRows">
+                    <span>Number of rows :    </span>
+                    <InputNumber min={1} max={500} defaultValue={10} onChange={this.onChange}/>
+                </div>
+                <div className="dtable">
+                <Datatable dataToDisplay = {this.state.data}/>
+                </div>
             </div>
-            <div className="dtable">
-            <Datatable dataToDisplay = {data}/>
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default Data;

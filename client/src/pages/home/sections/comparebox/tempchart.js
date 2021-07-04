@@ -21,46 +21,50 @@ const data = {
   ]
 };
 
-function TempChart(props) {
-  let picotemp = props.temperature;
-  let apitemp = props.owmtemperature;
-  const options = {
-    tooltips: {
-      mode: 'nearest',
-      intersect: false
-    },
-    hover: {
-      mode: 'nearest',
-      intersect: false
-    },
-    scales: {
-      xAxes: [
-        {
-          type: "realtime",
-          realtime: {
-            onRefresh: function () {
-              data.datasets[0].data.push({
-                x: Date.now(),
-                y: picotemp
-              });
-              data.datasets[1].data.push({
-                x: Date.now(),
-                y: apitemp
-              });
-            },
-            delay: 2000
-          }
-        },
-      ]
-    }
-  };
 
-  return (
-    <div>
-      <Line data={data} options={options} height={100} />
-    </div>
-  );
+class TempChart extends React.Component{
+  render() {
+    let picotemp = this.props.temperature;
+    let apitemp = this.props.owmtemperature;
+    const options = {
+      tooltips: {
+        mode: 'nearest',
+        intersect: false
+      },
+      hover: {
+        mode: 'nearest',
+        intersect: false
+      },
+      scales: {
+        xAxes: [
+          {
+            type: "realtime",
+            realtime: {
+              onRefresh: function () {
+                data.datasets[0].data.push({
+                  x: Date.now(),
+                  y: picotemp
+                });
+                data.datasets[1].data.push({
+                  x: Date.now(),
+                  y: apitemp
+                });
+              },
+              delay: 2000
+            }
+          },
+
+
+        ]
+      }
+    };
+
+    return (
+      <div>
+        <Line data={data} options={options} height={100} />
+      </div>
+    );
+  }
 }
-
 
 export default TempChart

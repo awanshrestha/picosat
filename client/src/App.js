@@ -1,17 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 import 'antd/dist/antd.css';
-import { Layout } from 'antd';
-
 import Myheader from './components/myheader';
 import Sidenav from './components/sidenav';
 import MainContent from './components/maincontent';
+import { Layout } from 'antd';
 
-function App(){
+class App extends React.Component {
+  render() {
     return (
       <Router>
-        <>
+        <div>
           <Layout >
             <Myheader/>
             <Layout>
@@ -19,8 +18,10 @@ function App(){
               <MainContent/>
             </Layout>
           </Layout>
-        </>
+        </div>
       </Router>
     );
+  }
 }
+
 export default App;

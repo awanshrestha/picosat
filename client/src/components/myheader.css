@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding: 0;
+    line-height: 1;
+}
+
+.wrapper{
+    box-shadow: 0 8px 12px 0px rgba(184, 184, 184, 0.438);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F7F7F7;
+    max-height: 88px;
+}
+
+.logo{
+    width: 20%;
+    height: auto;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-left: 60px;
+    min-width: 100px;
+}
+
+.topbar h2{
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 15px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    color: rgba(70, 109, 87, 0.795);
+}
+
+.topbar p{
+    color: rgb(181, 186, 209);
+    text-align: right;
+    margin-right: 50px;
+}
